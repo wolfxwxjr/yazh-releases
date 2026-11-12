@@ -14,7 +14,7 @@ needed.
 |---|---|
 | **`Yazh-1.1.0-portable.exe`** | Opens with a demo studio — 8 fictional students, lessons and payments, so you can try everything |
 | **`Yazh-1.1.0-empty.exe`** | Opens with an empty studio — sign in and add your own students |
-| **`Yazh-1.1.0-universal.dmg`** | Mac version (unsigned, built when the macOS workflow succeeds) |
+| **`Yazh-1.1.0-universal.dmg`** | Mac version — universal (Intel + Apple Silicon), unsigned |
 | **`SHA256SUMS.txt`** | Checksums to verify the downloads |
 
 Double-click the `.exe`. There is no installer and no setup wizard.
@@ -23,8 +23,10 @@ Double-click the `.exe`. There is no installer and no setup wizard.
 > “Windows protected your PC”. Click **More info → Run anyway**. Code-signing
 > certificates are a paid service; this does not mean the file is unsafe.
 >
-> **Mac:** Gatekeeper will block an unsigned app. Right-click → **Open** →
-> **Open** again, or allow it in System Settings → Privacy & Security.
+> **Mac:** download **[Yazh-1.1.0-universal.dmg](https://github.com/wolfxwxjr/yazh-releases/releases/download/v1.1.0/Yazh-1.1.0-universal.dmg)**.
+> Open the DMG, drag **Yazh** into Applications, then right-click → **Open** (or
+> allow it in System Settings → Privacy & Security). It is universal — Intel and
+> Apple Silicon — and unsigned.
 
 ## Sign in
 
