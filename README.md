@@ -12,9 +12,9 @@ needed.
 
 | File | What it does |
 |---|---|
-| **`Yazh-1.1.0-portable.exe`** | Opens with a demo studio — 8 fictional students, lessons and payments, so you can try everything |
-| **`Yazh-1.1.0-empty.exe`** | Opens with an empty studio — sign in and add your own students |
-| **`Yazh-1.1.0-universal.dmg`** | Mac version — universal (Intel + Apple Silicon), unsigned |
+| **`Yazh-1.1.1-portable.exe`** | Opens with a demo studio — 8 fictional students, lessons and payments, so you can try everything |
+| **`Yazh-1.1.1-empty.exe`** | Opens with an empty studio — sign in and add your own students |
+| **`Yazh-1.1.1-universal.dmg`** | Mac version — universal (Intel + Apple Silicon), unsigned |
 | **`SHA256SUMS.txt`** | Checksums to verify the downloads |
 
 Double-click the `.exe`. There is no installer and no setup wizard.
@@ -23,7 +23,7 @@ Double-click the `.exe`. There is no installer and no setup wizard.
 > “Windows protected your PC”. Click **More info → Run anyway**. Code-signing
 > certificates are a paid service; this does not mean the file is unsafe.
 >
-> **Mac:** download **[Yazh-1.1.0-universal.dmg](https://github.com/wolfxwxjr/yazh-releases/releases/download/v1.1.0/Yazh-1.1.0-universal.dmg)**.
+> **Mac:** download **[Yazh-1.1.1-universal.dmg](https://github.com/wolfxwxjr/yazh-releases/releases/download/v1.1.0/Yazh-1.1.1-universal.dmg)**.
 > Open the DMG, drag **Yazh** into Applications, then right-click → **Open** (or
 > allow it in System Settings → Privacy & Security). It is universal — Intel and
 > Apple Silicon — and unsigned.
@@ -110,7 +110,7 @@ All data stays on your computer, in `%APPDATA%\Yazh\data` (Windows) or
 Close the app and copy that folder to back everything up. Delete or rename it to
 start fresh; the app recreates the database on the next launch.
 
-## Version 1.1.0
+## Version 1.1.1
 
 - Ask Yazh assistant and veena reference
 - Daily Thirukkural on login and dashboard
@@ -119,12 +119,17 @@ start fresh; the app recreates the database on the next launch.
 - Error boundary so a failed screen never leaves a blank window
 - Mac build workflow
 
+### 1.1.1
+- The empty build uses its own `Yazh Empty` data folder and no longer inherits demo students.
+- Music quote on the login panel and a daily quote footer on every screen.
+- Rebuilt Windows and Mac packages.
+
 Previous: **1.0.0** — first portable Windows build.
 
 ## Verify a download
 
 ```powershell
-Get-FileHash .\Yazh-1.1.0-portable.exe -Algorithm SHA256
+Get-FileHash .\Yazh-1.1.1-portable.exe -Algorithm SHA256
 ```
 
 Compare with `SHA256SUMS.txt` in the release. GitHub's asset digest is the same
@@ -141,4 +146,4 @@ private repository.
 
 ---
 
-Yazh · Veena Classes · 1.1.0
+Yazh · Veena Classes · 1.1.1
