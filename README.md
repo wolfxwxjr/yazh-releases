@@ -12,13 +12,13 @@ subscription, no telemetry.
 
 | File | What it does |
 |---|---|
-| **`Yazh-1.3.0-portable.exe`** | Demo studio — 8 fictional students, lessons and payments to try everything |
-| **`Yazh-1.3.0-empty.exe`** | Empty studio — opens with a short setup, ready for your own students |
-| **`Yazh-1.3.0-universal.dmg`** | macOS, universal (Intel + Apple Silicon), unsigned |
+| **`Yazh-1.4.0-portable.exe`** | Windows — one app, starts with a short setup about you |
+| **`Yazh-1.4.0-universal.dmg`** | macOS — one app, same first-run setup |
 | **`SHA256SUMS.txt`** | Checksums for verification |
 
-Double-click the `.exe`. There is no installer, no setup wizard and **no login
-screen**.
+Double-click the `.exe`. There is no installer and **no login screen**; a short
+welcome asks for your name, studio, region, time zone and currency, then opens an
+empty studio.
 
 > **Windows warning:** the app is not code-signed, so SmartScreen may say
 > “Windows protected your PC”. Click **More info → Run anyway**.
@@ -30,10 +30,9 @@ screen**.
 
 Everything stays on your computer:
 
-| Build | Folder |
+| Platform | Folder |
 |---|---|
-| Demo | `%APPDATA%\Yazh\data` |
-| Empty | `%APPDATA%\Yazh Empty\data` |
+| Windows | `%APPDATA%\Yazh\data` |
 | Mac | `~/Library/Application Support/Yazh/data` |
 
 No cloud account, no telemetry, no student data uploaded. The desktop shell
@@ -74,8 +73,10 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
   balances, progress and countries, with **PDF and CSV** export.
 
 ### Extras
-- **First-run setup** — name, studio, region, time zone, currency.
+- **First-run setup** — name, studio, region, time zone, currency; no demo students.
 - **Automatic backups** — daily, last 14 kept, restore-on-restart.
+- **Practice tools** — tuner, metronome, practice timer, scale library, music
+  dictionary and an offline quick recorder.
 - **Settings** — region, time zone, currency, date/time format, week start,
   text size, high contrast, language, demo cleanup.
 - **Tamil** — navigation, page titles and settings labels (partial).
@@ -91,6 +92,7 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 ![Materials](materials.png)
 ![Reports](reports.png)
 ![Settings](settings.png)
+![Practice tools](tools.png)
 ![First-run setup](onboarding.png)
 
 ---
@@ -104,7 +106,7 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 5. **+ Add → Record payment**; download the receipt.
 6. **Ctrl/Cmd + K** for a quick question.
 
-## Version 1.3.0
+## Version 1.4.0
 
 - **For any instrument** — instrument field on every student; editable curriculum.
 - **First-run setup** for the empty build.
@@ -112,6 +114,8 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 - **Make-up credits** when a lesson is cancelled.
 - **Automatic daily backups**, last-backup status and restore-on-restart.
 - **Rebrand** — “Yazh — Studio Assistant”, for private music teachers.
+- **Fixed** — India region selects Asia/Kolkata and INR; payments can be edited;
+  monthly fees now show as due.
 - **Privacy enforcement** — localhost-only network block and `npm run privacy`.
 
 Previous: **1.2.0** — no sign-in, Settings, Materials, Reports, Progress.
@@ -120,7 +124,7 @@ Previous: **1.2.0** — no sign-in, Settings, Materials, Reports, Progress.
 ## Verify a download
 
 ```powershell
-Get-FileHash .\Yazh-1.3.0-portable.exe -Algorithm SHA256
+Get-FileHash .\Yazh-1.4.0-portable.exe -Algorithm SHA256
 ```
 
 Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
@@ -135,4 +139,4 @@ Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
 
 ---
 
-Yazh · Studio Assistant · 1.3.0
+Yazh · Studio Assistant · 1.4.0
