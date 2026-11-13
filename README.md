@@ -12,8 +12,8 @@ subscription, no telemetry.
 
 | File | What it does |
 |---|---|
-| **`Yazh-1.4.0-portable.exe`** | Windows — one app, starts with a short setup about you |
-| **`Yazh-1.4.0-universal.dmg`** | macOS — one app, same first-run setup |
+| **`Yazh-1.6.0-portable.exe`** | Windows — one app, starts with a short setup about you |
+| **`Yazh-1.6.0-universal.dmg`** | macOS — one app, same first-run setup |
 | **`SHA256SUMS.txt`** | Checksums for verification |
 
 Double-click the `.exe`. There is no installer and **no login screen**; a short
@@ -75,8 +75,14 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 ### Extras
 - **First-run setup** — name, studio, region, time zone, currency; no demo students.
 - **Automatic backups** — daily, last 14 kept, restore-on-restart.
-- **Practice tools** — tuner, metronome, practice timer, scale library, music
-  dictionary and an offline quick recorder.
+- **Practice tools** — tuner, metronome, tala simulator, shruti box, practice
+  timer, scale library, music dictionary and an offline quick recorder.
+- **Raga explorer** — 72 Melakarta ragas with arohanam, avarohanam, chakra,
+  compositions, comparison, favourites and notes.
+- **Composition library** — sections, lyrics, notation, raga/tala, favourites,
+  notes and student assignment.
+- **Complete Carnatic path** — 11 stages, needs-revision status, printable
+  per-student progress report.
 - **Settings** — region, time zone, currency, date/time format, week start,
   text size, high contrast, language, demo cleanup.
 - **Tamil** — navigation, page titles and settings labels (partial).
@@ -106,7 +112,7 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 5. **+ Add → Record payment**; download the receipt.
 6. **Ctrl/Cmd + K** for a quick question.
 
-## Version 1.4.0
+## Version 1.6.0
 
 - **For any instrument** — instrument field on every student; editable curriculum.
 - **First-run setup** for the empty build.
@@ -124,7 +130,7 @@ Previous: **1.2.0** — no sign-in, Settings, Materials, Reports, Progress.
 ## Verify a download
 
 ```powershell
-Get-FileHash .\Yazh-1.4.0-portable.exe -Algorithm SHA256
+Get-FileHash .\Yazh-1.6.0-portable.exe -Algorithm SHA256
 ```
 
 Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
@@ -139,4 +145,4 @@ Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
 
 ---
 
-Yazh · Studio Assistant · 1.4.0
+Yazh · Studio Assistant · 1.6.0
