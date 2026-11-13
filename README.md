@@ -12,7 +12,7 @@ subscription, no telemetry.
 
 | File | What it does |
 |---|---|
-| **`Yazh-1.12.0-portable.exe`** | Windows — available now |
+| **`Yazh-1.14.0-portable.exe`** | Windows — available now |
 | **macOS DMG** | Delayed — GitHub's macOS build runner is not being assigned; will be added later |
 | **`SHA256SUMS.txt`** | Checksums for verification |
 
@@ -88,6 +88,8 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 - **Student reports** — monthly milestones, completed compositions, pending exercises, lesson and practice history, and a fuller printable PDF.
 - **Raga depth** — janya ragas, parent Melakarta, characteristic prayogas, gamaka notes and custom ragas.
 - **Practice plan** — lesson templates, custom exercises, exercise assignment and practice history.
+- **Dashboard** — recently opened compositions and a card layout you can customise.
+- **Teaching assistant** — optional offline, Ollama or Gemini help for plans, ragas, talas, exercises, quizzes and summaries.
 - **Complete Carnatic path** — 11 stages, needs-revision status, printable
   per-student progress report.
 - **Settings** — region, time zone, currency, date/time format, week start,
@@ -106,6 +108,7 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 ![Lesson plan](lesson-plan.png)
 ![Recordings](recordings.png)
 ![Practice plan](practice.png)
+![Teaching assistant](assistant-ai.png)
 ![Progress](progress.png)
 ![Materials](materials.png)
 ![Reports](reports.png)
@@ -125,7 +128,7 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 5. **+ Add → Record payment**; download the receipt.
 6. **Ctrl/Cmd + K** for a quick question.
 
-## Version 1.12.0
+## Version 1.14.0
 
 **Windows is available now. The macOS build is delayed** because GitHub's macOS
 build runners are not being assigned. The DMG will be added to the same release
@@ -147,7 +150,7 @@ Previous: **1.2.0** — no sign-in, Settings, Materials, Reports, Progress.
 ## Verify a download
 
 ```powershell
-Get-FileHash .\Yazh-1.12.0-portable.exe -Algorithm SHA256
+Get-FileHash .\Yazh-1.14.0-portable.exe -Algorithm SHA256
 ```
 
 Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
