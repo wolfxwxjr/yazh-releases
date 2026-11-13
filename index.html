@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yazh — Studio Assistant for a private music school</title>
+<meta name="description" content="A Windows application for a private music school: students, lessons, attendance, fees, materials and progress in one file. Offline, no account.">
+<style>
+  :root{
+    --ivory:#f8f4ec; --paper:#fffdf8; --ink:#2f2330; --muted:#7b6b74;
+    --plum:#4a2545; --plum-soft:#6b3a63; --gold:#b08a4a; --line:#e3d9c9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ivory);color:var(--ink);
+    font:16px/1.6 "Segoe UI","Helvetica Neue",Arial,sans-serif}
+  a{color:var(--plum)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);background:var(--paper)}
+  .bar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;
+    letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--muted)}
+  .bar b{color:var(--plum);font-weight:600}
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+  .hero h1{font:600 54px/1.05 Georgia,"Times New Roman",serif;margin:0 0 18px;color:var(--plum);letter-spacing:-.01em}
+  .hero p{font-size:19px;color:#4b3d47;max-width:660px;margin:0 0 8px}
+  .hero .sub{font-size:15px;color:var(--muted);max-width:660px}
+  .kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+    font-weight:700;margin-bottom:14px}
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{font:600 26px/1.2 Georgia,serif;margin:0 0 18px;color:var(--plum)}
+  .dl{display:flex;gap:16px;flex-wrap:wrap;margin:26px 0 10px}
+  .btn{display:inline-block;background:var(--plum);color:#fff;text-decoration:none;
+    padding:15px 24px;border-radius:8px;font-weight:600;font-size:16px}
+  .btn span{display:block;font-weight:400;font-size:13px;opacity:.8;margin-top:2px}
+  .btn.ghost{background:transparent;color:var(--plum);border:1px solid var(--plum)}
+  .note{font-size:13.5px;color:var(--muted);max-width:640px}
+  code{background:#efe7da;padding:2px 6px;border-radius:4px;font-size:13px;
+    word-break:break-all;color:#4a3b34}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+  figure{margin:0}
+  figure img{width:100%;display:block;border:1px solid var(--line);border-radius:10px;
+    background:#fff;box-shadow:0 1px 2px rgba(74,37,69,.06)}
+  figcaption{font-size:13.5px;color:var(--muted);margin-top:9px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  ul{margin:0;padding-left:20px}
+  li{margin-bottom:9px}
+  .muted{color:var(--muted)}
+  footer{padding:44px 0 64px;font-size:14px;color:var(--muted)}
+  @media (max-width:760px){
+    .hero h1{font-size:38px}.grid,.cols{grid-template-columns:1fr}
+    .hero{padding:44px 0 30px}
+  }
+</style>
+</head>
+<body>
+
+<header><div class="wrap bar"><span><b>Yazh</b> · studio assistant</span><span>v1.14.0 · Windows</span></div></header>
+
+<div class="wrap hero">
+  <div class="kicker">For a private music school</div>
+  <h1>Eight students, four time zones,<br>one file.</h1>
+  <p>Yazh keeps a teaching studio in order: who is enrolled, which lessons are due, who attended,
+  which fees are open, what each student is working on — and a notation sheet that prints.</p>
+  <p class="sub">It runs offline on one Windows computer, stores everything in a single file,
+  and asks for no account.</p>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>Download</h2>
+    <div class="dl">
+      <a class="btn" href="https://github.com/nk12Kumar/yazh-releases/releases/download/v1.14.0/Yazh-1.14.0-portable.exe">
+        Download for Windows · 113 MB<span>One file, nothing to install, no admin rights</span></a>
+      <a class="btn ghost" href="https://github.com/nk12Kumar/yazh-releases/releases/latest">
+        Release notes<span>what changed in this build</span></a>
+    </div>
+    <p class="note"><b>Windows will warn you.</b> The build is unsigned, so SmartScreen shows
+      “Windows protected your PC”. Click <b>More info</b> → <b>Run anyway</b>.
+      Data is written next to the <code>.exe</code>.</p>
+    <p class="note">SHA-256 of the download:<br><code>592152b43dc447e934ff9ac5de62846692f226bcd85e890a46d575a4b4bce7d8</code></p>
+  </section>
+
+  <section>
+    <h2>What it looks like</h2>
+    <div class="grid">
+      <figure><img src="dashboard.png" alt="Yazh dashboard">
+        <figcaption>The studio on one screen: students, today's lessons, fees received and due.</figcaption></figure>
+      <figure><img src="students.png" alt="Student list">
+        <figcaption>Students with level, teacher, time zone and open fees.</figcaption></figure>
+      <figure><img src="payments.png" alt="Payment records">
+        <figcaption>Fees per student and month — open, partly paid, paid.</figcaption></figure>
+      <figure><img src="settings-tamil.png" alt="Settings in Tamil">
+        <figcaption>The interface follows the language the school works in, Tamil included.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Working in this build</h2>
+    <div class="cols">
+      <ul>
+        <li>Students, levels and teachers</li>
+        <li>Weekly schedule and lessons, across time zones</li>
+        <li>Attendance — present, absent, with a note</li>
+        <li>Fees: open, partly paid, paid, with receipts</li>
+        <li>Materials and recordings per student</li>
+        <li>Progress by piece, ragam and grade</li>
+      </ul>
+      <ul>
+        <li>Compositions, notation grid and a printable sheet</li>
+        <li>Practice tools and a raga explorer</li>
+        <li>Lesson plans and student reports as PDF</li>
+        <li>Assistant that answers from your own rows</li>
+        <li>Tamil and English interface</li>
+        <li>Local SQLite database — nothing leaves the PC</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Deliberately not here yet</h2>
+    <div class="cols">
+      <ul>
+        <li>Code signing — Windows warns on first run</li>
+        <li>No cloud sync and no online account</li>
+        <li>One seat — no shared database for several computers</li>
+      </ul>
+      <ul>
+        <li>No mobile app</li>
+        <li>German interface, though the data model is language-neutral</li>
+        <li>No connection to any external music library</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Built for a veena school — one teacher, students in several countries, and a lifetime of paper
+    registers. Source is private; the downloads are public.
+    <br><br>
+    <a href="https://github.com/nk12Kumar/yazh-releases/releases/latest">All releases</a>
+  </footer>
+</div>
+
+</body>
+</html>
