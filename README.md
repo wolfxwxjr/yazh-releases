@@ -4,7 +4,7 @@ A calm, offline studio for private music teachers: students, lessons, attendance
 class balances, payments, materials and progress. No account, no sign-in, no
 subscription, no telemetry.
 
-**[⬇ Download the latest build](https://github.com/wolfxwxjr/yazh-releases/releases/latest)**
+**[⬇ Download the latest build](https://github.com/nk12Kumar/yazh-releases/releases/latest)**
 
 ---
 
@@ -156,7 +156,7 @@ Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
 - Private server bound to `127.0.0.1`; no network exposure.
 - The renderer may only connect to the local studio.
 - This repository contains **downloads only**; source is at
-  [wolfxwxjr/yazh-studio](https://github.com/wolfxwxjr/yazh-studio) under MIT.
+  [nk12Kumar/yazh-studio](https://github.com/nk12Kumar/yazh-studio) under MIT.
 
 ---
 
