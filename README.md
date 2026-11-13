@@ -1,171 +1,113 @@
-# Yazh — Studio Assistant · downloads
+# Yazh — Studio Assistant
 
-A calm, offline studio for private music teachers: students, lessons, attendance,
-class balances, payments, materials and progress. No account, no sign-in, no
-subscription, no telemetry.
+**A calm, offline studio for private music teachers.** Students, lessons,
+attendance, fees, progress and practice tools in one quiet Windows app. No
+account, no subscription, no telemetry.
 
-**[⬇ Download the latest build](https://github.com/nk12Kumar/yazh-releases/releases/latest)**
+[**⬇ Download the latest Windows build**](https://github.com/nk12Kumar/yazh-releases/releases/latest)
+
+![Yazh dashboard](screenshots/dashboard.png)
+
+`Portable .exe` · `Offline` · `No demo data` · `No sign-in`
 
 ---
 
-## Which file?
+## Download
 
-| File | What it does |
+| File | Use it for |
 |---|---|
-| **`Yazh-1.17.0-portable.exe`** | Windows — available now |
-| **macOS DMG** | Delayed — GitHub's macOS build runner is not being assigned; will be added later |
-| **`SHA256SUMS.txt`** | Checksums for verification |
+| **`Yazh-1.18.0-portable.exe`** | Windows — available now |
+| **macOS DMG** | Delayed — hosted Mac runner unavailable |
+| **`SHA256SUMS.txt`** | Checksums |
 
-Double-click the `.exe`. There is no installer and **no login screen**; a short
-welcome asks for your name, studio, region, time zone and currency, then opens an
-empty studio.
+Double-click the `.exe`. There is no installer. A short welcome asks for your
+name, studio name, region, time zone and currency, then opens your empty studio.
+There are no demo students.
 
-> **Windows warning:** the app is not code-signed, so SmartScreen may say
-> “Windows protected your PC”. Click **More info → Run anyway**.
+> **Windows warning:** the app is not code-signed. SmartScreen may say
+> **“Windows protected your PC”** — click **More info → Run anyway**.
 >
-> **Mac:** open the DMG, drag **Yazh** to Applications, then right-click → **Open**
-> the first time. Gatekeeper blocks unsigned apps by default.
+> **Mac:** right-click **Yazh** → **Open** the first time.
+
+## Start here
+
+1. Open the app.
+2. Enter your studio details.
+3. Add your first student.
+4. Schedule a lesson or record a payment.
+
+![Students](screenshots/students.png)
+
+## What is inside
+
+- **Students** — profiles, instrument, level, fees, classes left, search and archive.
+- **Schedule** — month/week/day, weekly or fortnightly lessons, rescheduling,
+  meeting links and time-zone aware lesson times.
+- **Attendance** — present, absent, cancelled, rescheduled or completed; make-up credits.
+- **Payments** — tuition, individual lessons, packages, part-payments, balances,
+  PDF receipts and monthly fees due.
+- **Progress** — editable 11-stage Carnatic path, custom stages, revision flags,
+  dated notes and printable student reports.
+- **Reports** — revenue, attendance, growth, outstanding fees, lessons and
+  countries, with PDF and CSV export.
+- **Compositions** — Pallavi–Swarakalpana sections, lyrics, notation grid,
+  printable PDF, audio/PDF attachments and student assignment.
+- **Recordings** — record or upload takes, add feedback, compare takes and download.
+- **Practice tools** — tuner, metronome, tala simulator, shruti box, practice
+  timer, scale library, dictionary and quick recorder.
+- **Raga explorer** — 72 Melakarta ragas, janya ragas, prayogas and gamaka notes.
+- **Teaching assistant** — offline by default; optional Ollama or Gemini.
+- **Settings** — themes, text size, volume, language, backups, restore and update check.
+
+![Practice tools](screenshots/tools.png)
+
+> **Materials were removed in 1.18.0.** The section did not work reliably enough
+> to keep; the studio stays focused on lessons, fees and progress.
+
+**Full walkthrough: [Yazh User Guide](GUIDE.md).**
 
 ## Your data
-
-Everything stays on your computer:
 
 | Platform | Folder |
 |---|---|
 | Windows | `%APPDATA%\Yazh\data` |
-| Mac | `~/Library/Application Support/Yazh/data` |
+| macOS | `~/Library/Application Support/Yazh/data` |
 
-No cloud account, no telemetry, no student data uploaded. The desktop shell
-blocks every network request except the local studio API. Settings offers
-**Download backup**, **Backup now** and **Restore**.
+Everything stays on your computer. The local API is bound to `127.0.0.1`; there
+is no cloud account, no telemetry and no third-party runtime request. Yazh keeps
+an automatic daily backup of the last 14 copies. Backup, restore and full export
+are in **Settings → Data**.
 
-Because there is no password, use your computer's account lock if the machine is
-shared. Data lasts until you delete it — see the privacy note in the app/docs.
+Replacing the `.exe` keeps your data folder. Upgrades migrate in place and save a
+dated database snapshot before changing the schema.
 
----
+## Version 1.18.0
 
-## What's inside
+- **All demo students and placeholder data removed.** The app starts clean.
+- **Materials section removed completely** — navigation, page, shortcuts and API.
+- **First-run setup** asks for the teacher and studio details before the dashboard.
+- **Left navigation scrolls**, so every section is reachable on a short screen.
+- **Fixed** mobile overflow on the student and progress screens.
+- **Fixed** local composition audio/PDF links in the desktop shell.
+- **Fixed** packaged update-check version reporting.
+- **Faster dashboard** — heavy pages load on demand.
 
-### Studio
-- **Dashboard** — today's lessons, classes left, month's income, pending
-  payments, upcoming lessons, progress rings and recent activity.
-- **Students** — one **+ Add student** button; name, instrument, contact,
-  country, time zone, level, classes per month, fee and payment arrangement.
-- **Student page** — lessons, attendance, payments, curriculum, notes and details.
-
-### Teaching
-- **Schedule** — month, week and day views; weekly/fortnightly lessons;
-  reschedule; online links; double-booking prevention.
-- **Time zones** — stored in UTC, shown in your time, with the student's local
-  time while scheduling.
-- **Attendance** — present, absent, cancelled, rescheduled or completed.
-- **Lesson notes** — what you covered and what to practise next.
-- **Make-up credits** — cancelling creates a credit; redeem or waive it.
-- **Progress** — editable curriculum (Carnatic stages as a starter), custom
-  stages, and technique/repertoire/practice notes.
-- **Materials** — PDFs, audio, video, images, links and written lesson notes,
-  assigned to students.
-
-### Money
-- Monthly tuition, individual lessons and packages across **13 currencies**;
-  paid, pending, overdue or partly paid; balances; PDF receipts; CSV export.
-- **Reports** — revenue, lessons, attendance, student growth, outstanding
-  balances, progress and countries, with **PDF and CSV** export.
-
-### Extras
-- **First-run setup** — name, studio, region, time zone, currency; no demo students.
-- **Automatic backups** — daily, last 14 kept, restore-on-restart.
-- **Practice tools** — tuner, metronome, tala simulator, shruti box, practice
-  timer, scale library, music dictionary and an offline quick recorder.
-- **Raga explorer** — 72 Melakarta ragas with arohanam, avarohanam, chakra,
-  compositions, comparison, favourites and notes.
-- **Composition library** — sections, lyrics, notation, raga/tala, favourites,
-  notes and student assignment.
-- **Lesson plans** — objective, homework, raga, tala and linked composition.
-- **Notation grid** — one cell per beat, tala divisions, and a printable PDF.
-- **Recordings** — takes linked to students and compositions, feedback, comparison and download.
-- **Resource metadata** — raga, tala and instrument on materials, plus a JSON list export.
-- **Student reports** — monthly milestones, completed compositions, pending exercises, lesson and practice history, and a fuller printable PDF.
-- **Raga depth** — janya ragas, parent Melakarta, characteristic prayogas, gamaka notes and custom ragas.
-- **Practice plan** — lesson templates, custom exercises, exercise assignment and practice history.
-- **Dashboard** — recently opened compositions and a card layout you can customise.
-- **Teaching assistant** — optional offline, Ollama or Gemini help for plans, ragas, talas, exercises, quizzes and summaries.
-- **Settings depth** — update check, full backup bundle, themes, audio volume and notation density.
-- **Final gaps** — custom talas, composition audio/PDF uploads and guided swara playback.
-- **First-run gate** — asks for the teacher and studio details before opening the dashboard.
-- **Complete Carnatic path** — 11 stages, needs-revision status, printable
-  per-student progress report.
-- **Settings** — region, time zone, currency, date/time format, week start,
-  text size, high contrast, language, demo cleanup.
-- **Tamil** — navigation, page titles and settings labels (partial).
-- **Ask Yazh** — `Ctrl/Cmd + K`: “who owes money?”, “classes left for Ananya”,
-  “today's lessons”, plus a short veena reference.
-- **Thirukkural** — a daily verse in Tamil with G. U. Pope's 1886 translation.
-
-![Dashboard](dashboard.png)
-![Students](students.png)
-![Schedule](schedule.png)
-![Payments](payments.png)
-![Compositions](compositions.png)
-![Notation grid](notation-grid.png)
-![Lesson plan](lesson-plan.png)
-![Recordings](recordings.png)
-![Practice plan](practice.png)
-![Teaching assistant](assistant-ai.png)
-![Progress](progress.png)
-![Materials](materials.png)
-![Reports](reports.png)
-![Student report](student-report.png)
-![Settings](settings.png)
-![Practice tools](tools.png)
-![First-run setup](onboarding.png)
-
----
-
-## A simple daily rhythm
-
-1. Open the app — today's lessons and classes left are on the first screen.
-2. Tap **Present** or **Absent** on the lesson row.
-3. Add a note: what you covered, what to practise.
-4. **+ Add → Schedule lesson**; the student's local time appears under the form.
-5. **+ Add → Record payment**; download the receipt.
-6. **Ctrl/Cmd + K** for a quick question.
-
-## Version 1.17.0
-
-**Windows is available now. The macOS build is delayed** because GitHub's macOS
-build runners are not being assigned. The DMG will be added to the same release
-when the runner is available; the Windows app is complete and tested.
-
-- **For any instrument** — instrument field on every student; editable curriculum.
-- **First-run setup** for the empty build.
-- **Lesson notes** on any lesson.
-- **Make-up credits** when a lesson is cancelled.
-- **Automatic daily backups**, last-backup status and restore-on-restart.
-- **Rebrand** — “Yazh — Studio Assistant”, for private music teachers.
-- **Fixed** — India region selects Asia/Kolkata and INR; payments can be edited;
-  monthly fees now show as due.
-- **Privacy enforcement** — localhost-only network block and `npm run privacy`.
-
-Previous: **1.2.0** — no sign-in, Settings, Materials, Reports, Progress.
-**1.1.1** — empty-profile fix and daily quotes. **1.0.0** — first build.
+The Windows app is available now. The macOS build is delayed by GitHub's hosted
+runner and will be added when it runs.
 
 ## Verify a download
 
 ```powershell
-Get-FileHash .\Yazh-1.17.0-portable.exe -Algorithm SHA256
+Get-FileHash .\Yazh-1.18.0-portable.exe -Algorithm SHA256
 ```
 
-Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
+Compare with `SHA256SUMS.txt`.
 
-## Privacy
+## A note on source
 
-- Local SQLite database; no telemetry, analytics or third-party runtime requests.
-- Private server bound to `127.0.0.1`; no network exposure.
-- The renderer may only connect to the local studio.
-- This repository contains **downloads only**; source is at
-  [nk12Kumar/yazh-studio](https://github.com/nk12Kumar/yazh-studio) under MIT.
+This repository contains **downloads and user documentation only**. The source
+repository is private, maintained by the author. Yazh is MIT-licensed.
 
 ---
 
-Yazh · Studio Assistant · 1.9.0
+Yazh · Studio Assistant · 1.18.0
