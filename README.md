@@ -94,6 +94,7 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 ![Students](students.png)
 ![Schedule](schedule.png)
 ![Payments](payments.png)
+![Compositions](compositions.png)
 ![Progress](progress.png)
 ![Materials](materials.png)
 ![Reports](reports.png)
