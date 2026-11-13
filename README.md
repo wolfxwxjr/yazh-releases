@@ -12,8 +12,8 @@ subscription, no telemetry.
 
 | File | What it does |
 |---|---|
-| **`Yazh-1.8.0-portable.exe`** | Windows — one app, starts with a short setup about you |
-| **`Yazh-1.8.0-universal.dmg`** | macOS — one app, same first-run setup |
+| **`Yazh-1.9.0-portable.exe`** | Windows — available now |
+| **macOS DMG** | Delayed — GitHub's macOS build runner is not being assigned; will be added later |
 | **`SHA256SUMS.txt`** | Checksums for verification |
 
 Double-click the `.exe`. There is no installer and **no login screen**; a short
@@ -83,6 +83,8 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
   notes and student assignment.
 - **Lesson plans** — objective, homework, raga, tala and linked composition.
 - **Notation grid** — one cell per beat, tala divisions, and a printable PDF.
+- **Recordings** — takes linked to students and compositions, feedback, comparison and download.
+- **Resource metadata** — raga, tala and instrument on materials, plus a JSON list export.
 - **Complete Carnatic path** — 11 stages, needs-revision status, printable
   per-student progress report.
 - **Settings** — region, time zone, currency, date/time format, week start,
@@ -97,6 +99,9 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 ![Schedule](schedule.png)
 ![Payments](payments.png)
 ![Compositions](compositions.png)
+![Notation grid](notation-grid.png)
+![Lesson plan](lesson-plan.png)
+![Recordings](recordings.png)
 ![Progress](progress.png)
 ![Materials](materials.png)
 ![Reports](reports.png)
@@ -115,7 +120,11 @@ shared. Data lasts until you delete it — see the privacy note in the app/docs.
 5. **+ Add → Record payment**; download the receipt.
 6. **Ctrl/Cmd + K** for a quick question.
 
-## Version 1.8.0
+## Version 1.9.0
+
+**Windows is available now. The macOS build is delayed** because GitHub's macOS
+build runners are not being assigned. The DMG will be added to the same release
+when the runner is available; the Windows app is complete and tested.
 
 - **For any instrument** — instrument field on every student; editable curriculum.
 - **First-run setup** for the empty build.
@@ -133,7 +142,7 @@ Previous: **1.2.0** — no sign-in, Settings, Materials, Reports, Progress.
 ## Verify a download
 
 ```powershell
-Get-FileHash .\Yazh-1.8.0-portable.exe -Algorithm SHA256
+Get-FileHash .\Yazh-1.9.0-portable.exe -Algorithm SHA256
 ```
 
 Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
@@ -148,4 +157,4 @@ Compare with `SHA256SUMS.txt`. GitHub's asset digest is the same hash.
 
 ---
 
-Yazh · Studio Assistant · 1.8.0
+Yazh · Studio Assistant · 1.9.0
